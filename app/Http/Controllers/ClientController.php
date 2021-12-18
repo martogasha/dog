@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -13,6 +14,9 @@ class ClientController extends Controller
         return view('shop');
     }
     public function productDetail(){
-        return view('productDetail');
+        $product = Product::where('id','>',1)->first();
+        return view('productDetail',[
+            'product'=>$product
+        ]);
     }
 }

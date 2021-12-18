@@ -249,16 +249,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="description" role="tabpanel">
-                            <p>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</p>
-                            <ul>
-                                <li>Instant <strong>Patoi</strong> bestseller</li>
-                                <li>Translated into 18 languages</li>
-                                <li>#1 Most Recommended Book of the year.</li>
-                                <li>A neglected project, widely dismissed, its champion written off as unhinged.</li>
-                                <li>Yields a negative result in an experiment because of a flaw in the design of the experiment.</li>
-                                <li>An Amazon, Bloomberg, Financial Times, Forbes, Inc., Newsweek, Strategy + Business, Tech Crunch, Washington Post Best Business Book of the year</li>
-                            </ul>
-                            <p><i>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</i></p>
+                            <p>{{$product->desc}}</p>
                         </div>
                         <div class="tab-pane fade" id="additional-information" role="tabpanel">
                             <div class="table-responsive">
