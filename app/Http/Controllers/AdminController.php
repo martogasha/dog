@@ -30,7 +30,6 @@ class AdminController extends Controller
         $edit->name = $request->name;
         $edit->desc = $request->desc;
         $edit->amount = $request->amount;
-        $edit->category = $request->category;
         if ($request->image) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalName();
@@ -51,7 +50,6 @@ class AdminController extends Controller
         $store->name = $request->name;
         $store->desc = $request->desc;
         $store->amount = $request->amount;
-        $store->category = $request->category;
         if ($request->image) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalName();

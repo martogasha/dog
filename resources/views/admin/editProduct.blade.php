@@ -211,27 +211,6 @@
                                     @csrf
                                     <input type="hidden" value="{{$edit->id}}" name="pId">
                                     <div class="row">
-                                        @if($edit->category==1)
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Category</label>
-                                                    <select class="form-control" name="category">
-                                                        <option value="1">New Arrivals</option>
-                                                        <option value="2">Best Seller</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        @else
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Category</label>
-                                                    <select class="form-control" name="category">
-                                                        <option value="2">Best Seller</option>
-                                                        <option value="1">New Arrivals</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        @endif
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label>Name</label>

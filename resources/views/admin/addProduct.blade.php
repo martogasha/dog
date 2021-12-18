@@ -209,15 +209,6 @@
                                 <form action="{{url('storeProduct')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Category</label>
-                                        <select class="form-control" name="category">
-                                            <option value="1">New Arrivals</option>
-                                            <option value="2">Best Seller</option>
-                                        </select>
-                                    </div>
-                                    </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                             <div class="form-group">
                                                 <label>Name</label>
