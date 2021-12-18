@@ -28,6 +28,7 @@ class AdminController extends Controller
     public function eProduct(Request $request){
         $edit = Product::find($request->pId);
         $edit->name = $request->name;
+        $edit->topic = $request->topic;
         $edit->desc = $request->desc;
         $edit->amount = $request->amount;
         if ($request->image) {
@@ -48,6 +49,7 @@ class AdminController extends Controller
     public function storeProduct(Request $request){
         $store = new Product();
         $store->name = $request->name;
+        $store->topic = $request->topic;
         $store->desc = $request->desc;
         $store->amount = $request->amount;
         if ($request->image) {

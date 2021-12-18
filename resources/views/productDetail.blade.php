@@ -249,6 +249,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="description" role="tabpanel">
+                            <h4>fdffg fdgfdf fd</h4>
                             <p>{{$product->desc}}</p>
                         </div>
                         <div class="tab-pane fade" id="additional-information" role="tabpanel">
