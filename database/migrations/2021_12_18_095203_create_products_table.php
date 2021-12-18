@@ -19,6 +19,10 @@ class CreateProductsTable extends Migration
             $table->string('desc');
             $table->integer('amount');
             $table->mediumText('image');
+            $table->mediumText('image1')->nullable();
+            $table->mediumText('image2')->nullable();
+            $table->mediumText('image3')->nullable();
+            $table->mediumText('image4')->nullable();
             $table->timestamps();
         });
     }

@@ -57,6 +57,34 @@ class AdminController extends Controller
             $file->move('uploads/product/', $filename);
             $store->image = $filename;
         }
+        if ($request->image1) {
+            $file = $request->file('image1');
+            $extension = $file->getClientOriginalName();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/product/', $filename);
+            $store->image1 = $filename;
+        }
+        if ($request->image2) {
+            $file = $request->file('image2');
+            $extension = $file->getClientOriginalName();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/product/', $filename);
+            $store->image2 = $filename;
+        }
+        if ($request->image3) {
+            $file = $request->file('image3');
+            $extension = $file->getClientOriginalName();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/product/', $filename);
+            $store->image3 = $filename;
+        }
+        if ($request->image4) {
+            $file = $request->file('image4');
+            $extension = $file->getClientOriginalName();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/product/', $filename);
+            $store->image4 = $filename;
+        }
         $store->save();
         return redirect()->back()->with('success','PRODUCT ADDED SUCCESS');
     }
