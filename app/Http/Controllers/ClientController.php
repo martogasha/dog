@@ -8,15 +8,21 @@ use Illuminate\Http\Request;
 class ClientController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $products = Product::all();
+        return view('welcome',[
+            'products'=>$products
+        ]);
     }
     public function shop(){
         return view('shop');
     }
-    public function productDetail(){
-        $product = Product::where('id','>',0)->first();
+    public function productDetail($id){
+        $product = Product::find($id);
         return view('productDetail',[
             'product'=>$product
         ]);
+    }
+    public function productD(){
+        return view('admin.productD');
     }
 }

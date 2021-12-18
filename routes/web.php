@@ -22,4 +22,5 @@ Route::post('eProduct', [\App\Http\Controllers\AdminController::class, 'eProduct
 
 Route::get('/', [\App\Http\Controllers\ClientController::class, 'index']);
 Route::get('shop', [\App\Http\Controllers\ClientController::class, 'shop']);
-Route::get('productDetail', [\App\Http\Controllers\ClientController::class, 'productDetail']);
+Route::get('productDetail/{id}', [\App\Http\Controllers\ClientController::class, 'productDetail']);
+Route::get('productD', [\App\Http\Controllers\ClientController::class, 'productD']);

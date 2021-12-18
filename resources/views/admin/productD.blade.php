@@ -57,7 +57,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt="logo"></a>
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -65,19 +65,49 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Home</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home Demo - One</a></li>
+                                <li class="nav-item"><a href="index-2.html" class="nav-link">Home Demo - Two</a></li>
+                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Demo - Three</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="{{url('shop')}}" class="nav-link">Shop</a>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                                <li class="nav-item"><a href="order-tracking.html" class="nav-link">Order Tracking</a></li>
+                                <li class="nav-item"><a href="profile-authentication.html" class="nav-link">My Account</a></li>
+                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                                <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+                                <li class="nav-item"><a href="terms-conditions.html" class="nav-link">Terms & Conditions</a></li>
+                                <li class="nav-item"><a href="not-found.html" class="nav-link">404 Error Page</a></li>
+                            </ul>
                         </li>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link active">Shop</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
+                                <li class="nav-item"><a href="shop-left-sidebar.html" class="nav-link">Shop Left Sidebar</a></li>
+                                <li class="nav-item"><a href="shop-right-sidebar.html" class="nav-link">Shop Right Sidebar</a></li>
+                                <li class="nav-item"><a href="products-details.html" class="nav-link active">Products Details</a></li>
+                                <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+                                <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                                <li class="nav-item"><a href="wishlist.html" class="nav-link">Wishlist</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Blog</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
+                                <li class="nav-item"><a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a></li>
+                                <li class="nav-item"><a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a></li>
+                                <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog Details</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                    </ul>                    <div class="others-option">
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
                                 <li>
@@ -127,6 +157,18 @@
 </div>
 
 
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h1>Products Details</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Products Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 <div class="products-details-area ptb-100">
     <div class="container">
@@ -134,47 +176,38 @@
             <div class="col-lg-5 col-md-12">
                 <div class="products-details-thumbs-image">
                     <ul class="products-details-thumbs-image-slides">
-                        <li><img src="{{asset('uploads/product/'.$product->image)}}" alt="image"></li>
-                        @if(!empty($product->image1))
-                        <li><img src="{{asset('uploads/product/'.$product->image1)}}" alt="image"></li>
-                        @endif
-                        @if(!empty($product->image2))
-                        <li><img src="{{asset('uploads/product/'.$product->image2)}}" alt="image"></li>
-                        @endif
-                    @if(!empty($product->image3))
-                            <li><img src="{{asset('uploads/product/'.$product->image3)}}" alt="image"></li>
-                        @endif
-                    @if(!empty($product->image4))
-                                <li><img src="{{asset('uploads/product/'.$product->image4)}}" alt="image"></li>
-                        @endif
-
+                        <li><img src="{{asset('assets/img/products/products4.jpg')}}" alt="image"></li>
+                        <li><img src="{{asset('assets/img/products/products5.jpg')}}" alt="image"></li>
+                        <li><img src="{{asset('assets/img/products/products6.jpg')}}" alt="image"></li>
+                        <li><img src="{{asset('assets/img/products/products7.jpg')}}" alt="image"></li>
+                        <li><img src="{{asset('assets/img/products/products8.jpg')}}" alt="image"></li>
                     </ul>
                     <div class="slick-thumbs">
                         <ul>
-                            <li><img src="{{asset('uploads/product/'.$product->image)}}" alt="image"></li>
-                            @if(!empty($product->image1))
-                                <li><img src="{{asset('uploads/product/'.$product->image1)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image2))
-                                <li><img src="{{asset('uploads/product/'.$product->image2)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image3))
-                                <li><img src="{{asset('uploads/product/'.$product->image3)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image4))
-                                <li><img src="{{asset('uploads/product/'.$product->image4)}}" alt="image"></li>
-                            @endif
+                            <li><img src="{{asset('assets/img/products/products4.jpg')}}" alt="image"></li>
+                            <li><img src="{{asset('assets/img/products/products5.jpg')}}" alt="image"></li>
+                            <li><img src="{{asset('assets/img/products/products6.jpg')}}" alt="image"></li>
+                            <li><img src="{{asset('assets/img/products/products7.jpg')}}" alt="image"></li>
+                            <li><img src="{{asset('assets/img/products/products8.jpg')}}" alt="image"></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-7 col-md-12">
                 <div class="products-details-desc">
-                    <h3>{{$product->name}}</h3>
+                    <h3>Stack pet collars</h3>
                     <div class="price">
-                        <span class="new-price">Ksh {{$product->amount}}</span>
+                        <span class="new-price">$35.00</span>
+                        <span class="old-price">$55.00</span>
                     </div>
-                    <p>{{$product->desc}}</p>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <p>Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipiscing elitet.</p>
                     <div class="products-add-to-cart">
                         <div class="input-counter">
                             <span class="minus-btn"><i class='bx bx-minus'></i></span>
@@ -184,6 +217,12 @@
                         <button type="submit" class="default-btn"><span>Add to Cart</span></button>
                     </div>
                     <a href="wishlist.html" class="add-to-wishlist"><i class='bx bx-heart'></i> Add to wishlist</a>
+                    <ul class="products-info">
+                        <li><span>SKU:</span> 007</li>
+                        <li><span>Categories:</span> <a href="shop-grid.html">Brash</a></li>
+                        <li><span>Availability:</span> In stock (7 items)</li>
+                        <li><span>Tag:</span> Accessories</li>
+                    </ul>
                     <div class="products-share">
                         <ul class="social">
                             <li><span>Share:</span></li>
@@ -201,11 +240,25 @@
                         <li class="nav-item">
                             <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
                         </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="additional-information-tab" data-bs-toggle="tab" data-bs-target="#additional-information" type="button" role="tab" aria-controls="additional-information" aria-selected="false">Additional Info</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews</button>
+                        </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="description" role="tabpanel">
-                            <h3>{{$product->topic}}</h3>
-                            <p>{{$product->desc}}</p>
+                            <p>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</p>
+                            <ul>
+                                <li>Instant <strong>Patoi</strong> bestseller</li>
+                                <li>Translated into 18 languages</li>
+                                <li>#1 Most Recommended Book of the year.</li>
+                                <li>A neglected project, widely dismissed, its champion written off as unhinged.</li>
+                                <li>Yields a negative result in an experiment because of a flaw in the design of the experiment.</li>
+                                <li>An Amazon, Bloomberg, Financial Times, Forbes, Inc., Newsweek, Strategy + Business, Tech Crunch, Washington Post Best Business Book of the year</li>
+                            </ul>
+                            <p><i>This story, dazzling in its powerful simplicity and soul-stirring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried near the Pyramids. Lorem ipsum dolor sit.</i></p>
                         </div>
                         <div class="tab-pane fade" id="additional-information" role="tabpanel">
                             <div class="table-responsive">
@@ -426,7 +479,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="image">
-                            <img src="{{asset('assets/img/products/products1.jpg')}}" alt="image">
+                            <img src="assets/img/products/products1.jpg" alt="image">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -495,7 +548,7 @@
                         <h3 class="widget-title"><span>Our Best Sellers</span></h3>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products1.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products1.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Pet brash</a></h4>
@@ -511,7 +564,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products2.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products2.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Automatic dog blue leash</a></h4>
@@ -527,7 +580,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products3.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products3.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Cat toilet bowl</a></h4>
@@ -543,7 +596,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products4.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products4.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Bowl with rubber toy</a></h4>
@@ -587,7 +640,7 @@
 </div>
 
 
-<script data-cfasync="false" src="https://templates.envytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{{asset('assets/js/jquery.min.js')}}"></script>
+<script data-cfasync="false" src="https://templates.envytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
 <script src="{{asset('assets/js/meanmenu.min.js')}}"></script>
@@ -602,8 +655,6 @@
 <script src="{{asset('assets/js/contact-form-script.js')}}"></script>
 <script src="{{asset('assets/js/ajaxchimp.min.js')}}"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
-
-
 </body>
 
 <!-- Mirrored from templates.envytheme.com/patoi/default/products-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
