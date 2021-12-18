@@ -14,7 +14,7 @@ class ClientController extends Controller
         return view('shop');
     }
     public function productDetail(){
-        $product = Product::where('id','>',1)->first();
+        $product = Product::where('id','>',0)->first();
         return view('productDetail',[
             'product'=>$product
         ]);
