@@ -57,7 +57,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/img/dogLogo.png" alt="logo"></a>
+                    <a href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/dogLogo.png" alt="logo"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
@@ -178,7 +178,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
-                    <a href="index.html" class="logo">
+                    <a href="{{url('/')}}" class="logo">
                         <img src="assets/img/dogLogo.png" alt="logo">
                     </a>
                     <ul class="footer-contact-info">
