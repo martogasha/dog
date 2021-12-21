@@ -24,6 +24,10 @@ Route::post('eProduct', [\App\Http\Controllers\AdminController::class, 'eProduct
 Route::get('/', [\App\Http\Controllers\ClientController::class, 'index']);
 Route::get('shop', [\App\Http\Controllers\ClientController::class, 'shop']);
 Route::get('cart', [\App\Http\Controllers\ClientController::class, 'cart']);
+Route::get('cartReduceByOne/{id}', [\App\Http\Controllers\ClientController::class, 'getReduceByOne']);
+Route::get('addByOne/{id}', [\App\Http\Controllers\ClientController::class, 'addByOne']);
+Route::get('cartRemove/{id}', [ClientController::class, 'removeItem']);
+Route::get('checkout', [ClientController::class, 'checkout']);
 Route::post('storeCart', [ClientController::class, 'storeCart'])->name('storeCart');
 
 Route::get('productDetail/{id}', [\App\Http\Controllers\ClientController::class, 'productDetail']);

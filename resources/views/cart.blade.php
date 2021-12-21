@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <p>FREE 5 days shipping over $99</p>
+                <p>Phone: <b>0796522538</b> Gmail: <b>gabrielmburu63@gmail.com</b></p>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-6">
                 <div class="search-box">
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                    <a href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -65,60 +65,27 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Home</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="index.html" class="nav-link">Home Demo - One</a></li>
-                                <li class="nav-item"><a href="index-2.html" class="nav-link">Home Demo - Two</a></li>
-                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Demo - Three</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                                <li class="nav-item"><a href="order-tracking.html" class="nav-link">Order Tracking</a></li>
-                                <li class="nav-item"><a href="profile-authentication.html" class="nav-link">My Account</a></li>
-                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                                <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
-                                <li class="nav-item"><a href="terms-conditions.html" class="nav-link">Terms & Conditions</a></li>
-                                <li class="nav-item"><a href="not-found.html" class="nav-link">404 Error Page</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="{{url('shop')}}" class="nav-link">Shop</a>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link active">Shop</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
-                                <li class="nav-item"><a href="shop-left-sidebar.html" class="nav-link">Shop Left Sidebar</a></li>
-                                <li class="nav-item"><a href="shop-right-sidebar.html" class="nav-link">Shop Right Sidebar</a></li>
-                                <li class="nav-item"><a href="products-details.html" class="nav-link">Products Details</a></li>
-                                <li class="nav-item"><a href="cart.html" class="nav-link active">Cart</a></li>
-                                <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
-                                <li class="nav-item"><a href="wishlist.html" class="nav-link">Wishlist</a></li>
-                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
-                                <li class="nav-item"><a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a></li>
-                                <li class="nav-item"><a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a></li>
-                                <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog Details</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a>
                         </li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                    <div class="others-option">
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>                    <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
-                                <li>
-                                    <select class="form-select">
-                                        <option selected>English</option>
-                                        <option value="1">Spanish</option>
-                                        <option value="2">Chinese</option>
-                                    </select>
-                                </li>
                                 <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
-                                <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
+                                <li><a href="{{url('cart')}}">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
+                                        </button>
+                                    </a></li>
                             </ul>
                         </div>
                     </div>
@@ -156,7 +123,7 @@
     </div>
 </div>
 
-
+@include('flash-message')
 
 <div class="cart-area ptb-100">
     <div class="container">
@@ -179,16 +146,16 @@
                         <td><a href="{{url('cartRemove',$product['item']['id'])}}" class="remove"><i class='bx bx-trash'></i></a></td>
                         <td class="product-thumbnail">
                             <a href="products-details.html">
-                                <img src="{{asset('uploads/product/'.$product['item']['photo'])}}" alt="item">
+                                <img src="{{asset('uploads/product/'.$product['item']['image'])}}" alt="item">
                                 <h3>{{$product['item']['name']}}</h3>
                             </a>
                         </td>
                         <td>Ksh:{{$product['item']['amount']}}</td>
                         <td class="product-quantity">
                             <div class="input-counter">
-                                <span class="minus-btn"><i class='bx bx-minus'></i></span>
-                                <input type="text" value="1">
-                                <span class="plus-btn"><i class='bx bx-plus'></i></span>
+                                <a href="{{url('cartReduceByOne',$product['item']['id'])}}"><span class="minus-btn"><i class='bx bx-minus'></i></span></a>
+                                <input type="text" value="{{$product['quantity']}}">
+                                <a href="{{url('addByOne',$product['item']['id'])}}"><span class="plus-btn"><i class='bx bx-plus'></i></span></a>
                             </div>
                         </td>
                         <td>Ksh:{{$product['item']['amount'] * $product['quantity']}}</td>
@@ -228,8 +195,8 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
-                    <a href="index.html" class="logo">
-                        <img src="assets/img/white-logo.png" alt="logo">
+                    <a href="{{url('/')}}" class="logo">
+                        <img src="assets/img/dogLogo.png" alt="logo">
                     </a>
                     <ul class="footer-contact-info">
                         <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>

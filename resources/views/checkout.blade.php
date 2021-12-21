@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:53:12 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
 <head>
 
     <meta charset="utf-8">
@@ -26,12 +26,20 @@
 <body>
 
 <div class="top-header-area">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-12">
                 <p>Phone: <b>0796522538</b> Gmail: <b>gabrielmburu63@gmail.com</b></p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-6">
+                <div class="search-box">
+                    <form>
+                        <input type="text" class="input-search" placeholder="Enter your keywords...">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                    </form>
                 </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
                 <ul>
                     <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
                     <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
@@ -55,7 +63,7 @@
         </div>
     </div>
     <div class="patoi-nav">
-        <div class="container-fluid">
+        <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
@@ -69,21 +77,16 @@
                         <li class="nav-item"><a href="#" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                    </ul>
+                    </ul>                    <div class="others-option">
                     <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
-                                <li>
-                                    <div class="search-icon">
-                                        <i class='bx bx-search'></i>
-                                    </div>
-                                </li>
                                 <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
                                 <li><a href="{{url('cart')}}">
                                         <button type="button" class="btn btn-primary">
                                             <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
                                         </button>
-                                    </a></li>                            </ul>
+                                    </a></li>                             </ul>
                         </div>
                     </div>
                 </div>
@@ -103,18 +106,6 @@
                 <div class="option-inner">
                     <div class="others-option">
                         <ul>
-                            <li>
-                                <select class="form-select">
-                                    <option selected>English</option>
-                                    <option value="1">Spanish</option>
-                                    <option value="2">Chinese</option>
-                                </select>
-                            </li>
-                            <li>
-                                <div class="search-icon">
-                                    <i class='bx bx-search'></i>
-                                </div>
-                            </li>
                             <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                         </ul>
@@ -125,110 +116,200 @@
     </div>
 </div>
 
-
-<div class="search-overlay">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="search-overlay-layer"></div>
-            <div class="search-overlay-layer"></div>
-            <div class="search-overlay-layer"></div>
-            <div class="search-overlay-close">
-                <span class="search-overlay-close-line"></span>
-                <span class="search-overlay-close-line"></span>
-            </div>
-            <div class="search-overlay-form">
-                <form>
-                    <input type="text" class="input-search" placeholder="Enter your keywords...">
-                    <button type="submit"><i class='bx bx-search'></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="main-banner-area">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-content">
-                    <span class="sub-title">Welcome to Pet Mundu</span>
-                    <h1>We provide best pet products</h1>
-                    <p>Save 20% off your first order</p>
-                    <a href="{{url('shop')}}" class="default-btn"><span>Shop Now</span></a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-image">
-                    <img src="assets/img/banner/banner1.png" alt="banner-image">
-                    <img src="assets/img/banner/banner2.png" alt="banner-image">
-                    <img src="assets/img/banner/banner3.png" alt="banner-image">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<div class="products-area pb-75">
+<div class="checkout-area ptb-100">
     <div class="container">
-        <div class="section-title">
-            <h2>Best Products</h2>
+        <div class="user-actions">
+            <span>Returning customer? <a href="profile-authentication.html">Click here to login</a></span>
         </div>
-        <div class="row justify-content-center">
-            @foreach($products as $product)
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="{{url('productDetail',$product->id)}}" class="d-block">
-                            <img src="{{asset('uploads/product/'.$product->image)}}" alt="products-image">
-                        </a>
+        <form>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="billing-details">
+                        <h3><span>Billing details</span></h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>First name <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Last name <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Company name (optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Country / Region <span class="required">*</span></label>
+                                    <input id="country_selector" type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Street address <span class="required">*</span></label>
+                                    <input type="text" class="form-control" placeholder="House number and street name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Town / City <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>County (optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Postcode <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Phone <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Email address <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="checkme">
+                                    <label class="form-check-label" for="checkme">Save this information for next time</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">{{$product->name}}</a></h3>
-                        <div class="price">
-                            <span class="new-price">Ksh {{$product->amount}}</span>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="billing-details">
+                        <h3><span>Ship to a different address?</span></h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>First name <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Last name <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Company name (optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Country / Region <span class="required">*</span></label>
+                                    <input id="country_selector2" type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Street address <span class="required">*</span></label>
+                                    <input type="text" class="form-control" placeholder="House number and street name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Town / City <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>County (optional)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Postcode <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <label>Order notes (optional)</label>
+                                    <textarea class="form-control" cols="30" rows="6" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="order-details">
+                        <h3>Your order</h3>
+                        <div class="order-table table-responsive">
+                            <table class="table table-bordered">
+                                <tbody>
+                                @if(isset($products))
+                                    @foreach($products as $product)
+                                <tr>
+                                    <td class="product-name"><a href="products-details.html">{{$product['item']['name']}}</a></td>
+                                    <td class="product-total">
+                                        <span class="subtotal-amount">Ksh:{{$product['item']['amount']*$product['quantity']}}</span>
+                                    </td>
+                                </tr>
+                                    @endforeach
+                                @endif
+                                <tr>
+                                    <td class="total-price"><span>Order Total</span></td>
+                                    <td class="product-subtotal">
+                                        <span class="subtotal-amount">Ksh:{{$totalPrice}}</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="payment-box">
+                            <div class="payment-method">
+                                <p>
+                                    <input type="radio" id="cash-on-delivery" name="radio-group" checked>
+                                    <label for="cash-on-delivery">Cash on delivery</label>
+                                    Pay with cash upon delivery.
+                                </p>
+                            </div>
+                            <button type="submit" class="default-btn"><span>Place Order</span></button>
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+        </form>
     </div>
 </div>
-<div class="facility-area">
-    <div class="container">
-        <div class="facility-inner">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="single-facility-box">
-                        <img src="assets/img/icon/icon1.png" alt="icon">
-                        <h3>Best collection</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="single-facility-box">
-                        <img src="assets/img/icon/icon2.png" alt="icon">
-                        <h3>Fast delivery</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="single-facility-box">
-                        <img src="assets/img/icon/icon3.png" alt="icon">
-                        <h3>24/7 customer support</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="single-facility-box">
-                        <img src="assets/img/icon/icon4.png" alt="icon">
-                        <h3>Secured payment</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
+
+
 <footer class="footer-area">
     <div class="container">
         <div class="row">
@@ -240,7 +321,7 @@
                     <ul class="footer-contact-info">
                         <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>
                         <li><span>Tech support:</span> <a href="tel:+1514312-5678">+1 (514) 312-5678</a></li>
-                        <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#bfd7dad3d3d0ffcfdecbd0d691dcd0d2"><span class="__cf_email__" data-cfemail="2e464b4242416e5e4f5a4147004d4143">[email&#160;protected]</span></a></li>
+                        <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#620a070e0e0d221203160d0b4c010d0f"><span class="__cf_email__" data-cfemail="f098959c9c9fb08091849f99de939f9d">[email&#160;protected]</span></a></li>
                         <li><span>Address:</span> 1523 Cook Hill Road New Haven, CT</li>
                     </ul>
                 </div>
@@ -489,5 +570,5 @@
 <script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:54:52 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:59 GMT -->
 </html>

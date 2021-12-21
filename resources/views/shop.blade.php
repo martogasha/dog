@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <p>FREE 5 days shipping over $99</p>
+                <p>Phone: <b>0796522538</b> Gmail: <b>gabrielmburu63@gmail.com</b></p>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-6">
                 <div class="search-box">
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
@@ -81,16 +81,12 @@
                     <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
-                                <li>
-                                    <select class="form-select">
-                                        <option selected>English</option>
-                                        <option value="1">Spanish</option>
-                                        <option value="2">Chinese</option>
-                                    </select>
-                                </li>
                                 <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
-                                <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                            </ul>
+                                <li><a href="{{url('cart')}}">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
+                                        </button>
+                                    </a></li>                            </ul>
                         </div>
                     </div>
                 </div>
@@ -110,13 +106,6 @@
                 <div class="option-inner">
                     <div class="others-option">
                         <ul>
-                            <li>
-                                <select class="form-select">
-                                    <option selected>English</option>
-                                    <option value="1">Spanish</option>
-                                    <option value="2">Chinese</option>
-                                </select>
-                            </li>
                             <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                         </ul>
@@ -190,7 +179,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <a href="index.html" class="logo">
-                        <img src="assets/img/white-logo.png" alt="logo">
+                        <img src="assets/img/dogLogo.png" alt="logo">
                     </a>
                     <ul class="footer-contact-info">
                         <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>

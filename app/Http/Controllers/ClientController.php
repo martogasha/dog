@@ -32,11 +32,11 @@ class ClientController extends Controller
     }
     public function cart(){
         if (!Session::has('cat')){
-            return view('client.cart');
+            return view('cart');
         }
         $oldCart = Session::get('cat');
         $cart = new Cat($oldCart);
-        return view('admin.cart',[
+        return view('cart',[
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice
         ]);
@@ -47,5 +47,49 @@ class ClientController extends Controller
         $cart = new Cat($oldCart);
         $cart->add($product , $product->id);
         $request->session()->put('cat',$cart);
+    }
+    public function addByOne($id){
+        $oldCart = Session::has('cat') ? Session::get('cat'):null;
+        $cart = new Cat($oldCart);
+        $cart->addByOne($id);
+        if (count($cart->item)>0) {
+            Session::put('cat', $cart);
+        }
+        else{
+            Session::forget('cat');
+        }
+        return redirect()->back()->with('success','ITEM SUCCESSFULLY ADDED TO CART');
+    }
+    public function getReduceByOne($id){
+        $oldCart = Session::has('cat') ? Session::get('cat'):null;
+        $cart = new Cat($oldCart);
+        $cart->reduceByOne($id);
+        if (count($cart->item)>0) {
+            Session::put('cat', $cart);
+        }
+        else{
+            Session::forget('cat');
+        }
+        return redirect()->back()->with('success','ITEM SUCCESSFULLY REMOVED FROM CART');
+    }
+    public function removeItem($id){
+        $oldCart = Session::has('cat') ? Session::get('cat'):null;
+        $cart = new Cat($oldCart);
+        $cart->removeItem($id);
+        if (count($cart->item)>0) {
+            Session::put('cat', $cart);
+        }
+        else{
+            Session::forget('cat');
+        }
+        return redirect()->back()->with('success','ITEM SUCCESSFULLY REMOVED FROM CART');
+    }
+    public function checkout(){
+        $oldCart = Session::get('cat');
+        $cart = new Cat($oldCart);
+        return view('checkout',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice,
+        ]);
     }
 }
