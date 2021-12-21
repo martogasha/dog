@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/shop-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:56 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:51 GMT -->
 <head>
 
     <meta charset="utf-8">
@@ -20,63 +20,109 @@
     <link rel="stylesheet" href="assets/css/meanmenu.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Shop - Pet Mundu Shop</title>
+    <title>Patoi - Pet Care Shop HTML Template</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
 
-@include('nav')
-
-
-<div class="products-area ptb-100">
+<div class="top-header-area">
     <div class="container">
-        <div class="patoi-grid-sorting row align-items-center">
-            <div class="col-lg-6 col-md-6 result-count">
-                <div class="d-flex align-items-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productsFilterModal" class="sidebar-filter"><i class='bx bx-filter-alt'></i> Filter</a>
-                    <p>We found <span class="count">12</span> products available for you</p>
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <p>FREE 5 days shipping over $99</p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-6">
+                <div class="search-box">
+                    <form>
+                        <input type="text" class="input-search" placeholder="Enter your keywords...">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 ordering">
-                <div class="select-box">
-                    <label>Sort By:</label>
-                    <select>
-                        <option>Default</option>
-                        <option>Popularity</option>
-                        <option>Latest</option>
-                        <option>Price: low to high</option>
-                        <option>Price: high to low</option>
-                    </select>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <ul>
+                    <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="navbar-area">
+    <div class="patoi-responsive-nav">
+        <div class="container">
+            <div class="patoi-responsive-menu">
+                <div class="logo">
+                    <a href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            @foreach($products as $product)
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="{{url('productDetail',$product->id)}}" class="d-block">
-                            <img src="{{asset('uploads/product/'.$product->image)}}" alt="products-image">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <h3><a href="{{url('productDetail',$product->id)}}">{{$product->name}}</a></h3>
-                        <div class="price">
-                            <span class="new-price">Ksh {{$product->amount}}</span>
+    </div>
+    <div class="patoi-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="{{url('/')}}"><img src="assets/img/logo.png" alt="logo"></a>
+                <div class="collapse navbar-collapse mean-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item"><a href="{{url('shop')}}" class="nav-link">Shop</a>
+                        <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a>
+                        </li>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>                    <div class="others-option">
+                    <div class="others-option">
+                        <div class="d-flex align-items-center">
+                            <ul>
+                                <li>
+                                    <select class="form-select">
+                                        <option selected>English</option>
+                                        <option value="1">Spanish</option>
+                                        <option value="2">Chinese</option>
+                                    </select>
+                                </li>
+                                <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
+                                <li><a href="{{url('cart')}}">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
+                                        </button>
+                                    </a></li>                            </ul>
                         </div>
-
                     </div>
                 </div>
+            </nav>
+        </div>
+    </div>
+    <div class="others-option-for-responsive">
+        <div class="container">
+            <div class="dot-menu">
+                <div class="inner">
+                    <div class="circle circle-one"></div>
+                    <div class="circle circle-two"></div>
+                    <div class="circle circle-three"></div>
+                </div>
             </div>
-            @endforeach
-            <div class="col-lg-12 col-md-12">
-                <div class="pagination-area">
-                    <div class="nav-links">
-                        <a href="shop-grid.html" class="previous page-numbers" title="Next Page"><i class='bx bx-chevrons-left'></i></a>
-                        <span class="page-numbers current">1</span>
-                        <a href="shop-grid.html" class="page-numbers">2</a>
-                        <a href="shop-grid.html" class="page-numbers">3</a>
-                        <a href="shop-grid.html" class="next page-numbers" title="Next Page"><i class='bx bx-chevrons-right'></i></a>
+            <div class="container">
+                <div class="option-inner">
+                    <div class="others-option">
+                        <ul>
+                            <li>
+                                <select class="form-select">
+                                    <option selected>English</option>
+                                    <option value="1">Spanish</option>
+                                    <option value="2">Chinese</option>
+                                </select>
+                            </li>
+                            <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
+                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -84,7 +130,34 @@
     </div>
 </div>
 
+
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h1>About Us</h1>
+            <ul>
+                <li><a href="{{url('/')}}">Home</a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="about-area pt-100 pb-75">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-md-12">
+                <div class="about-text">
+                    <h2>ABOUT US</h2>
+                    <p>A premium shop that provides quality pet products and accessories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @include('footer')
+
 <div class="go-top"><i class='bx bx-upvote'></i></div>
 
 <div class="modal fade productsQuickView" id="productsQuickView" tabindex="-1" aria-hidden="true">
@@ -273,5 +346,5 @@
 <script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/shop-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:56 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:54 GMT -->
 </html>

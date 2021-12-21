@@ -92,4 +92,12 @@ class ClientController extends Controller
             'totalPrice'=>$cart->totalPrice,
         ]);
     }
+    public function about(){
+        $oldCart = Session::get('cat');
+        $cart = new Cat($oldCart);
+        return view('about',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice,
+        ]);
+    }
 }

@@ -28,6 +28,7 @@ Route::get('cartReduceByOne/{id}', [\App\Http\Controllers\ClientController::clas
 Route::get('addByOne/{id}', [\App\Http\Controllers\ClientController::class, 'addByOne']);
 Route::get('cartRemove/{id}', [ClientController::class, 'removeItem']);
 Route::get('checkout', [ClientController::class, 'checkout']);
+Route::get('about', [ClientController::class, 'about']);
 Route::post('storeCart', [ClientController::class, 'storeCart'])->name('storeCart');
 
 Route::get('productDetail/{id}', [\App\Http\Controllers\ClientController::class, 'productDetail']);
