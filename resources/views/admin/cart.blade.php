@@ -1,30 +1,27 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/products-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:56 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/rangeSlider.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/odometer.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/boxicons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/slick.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/countrySelect.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/meanmenu.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/countrySelect.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Patoi - Pet Care Shop HTML Template</title>
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
 
@@ -60,7 +57,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt="logo"></a>
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -68,28 +65,60 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Home</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home Demo - One</a></li>
+                                <li class="nav-item"><a href="index-2.html" class="nav-link">Home Demo - Two</a></li>
+                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Demo - Three</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="{{url('shop')}}" class="nav-link">Shop</a>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                                <li class="nav-item"><a href="order-tracking.html" class="nav-link">Order Tracking</a></li>
+                                <li class="nav-item"><a href="profile-authentication.html" class="nav-link">My Account</a></li>
+                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                                <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+                                <li class="nav-item"><a href="terms-conditions.html" class="nav-link">Terms & Conditions</a></li>
+                                <li class="nav-item"><a href="not-found.html" class="nav-link">404 Error Page</a></li>
+                            </ul>
                         </li>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link active">Shop</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
+                                <li class="nav-item"><a href="shop-left-sidebar.html" class="nav-link">Shop Left Sidebar</a></li>
+                                <li class="nav-item"><a href="shop-right-sidebar.html" class="nav-link">Shop Right Sidebar</a></li>
+                                <li class="nav-item"><a href="products-details.html" class="nav-link">Products Details</a></li>
+                                <li class="nav-item"><a href="cart.html" class="nav-link active">Cart</a></li>
+                                <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                                <li class="nav-item"><a href="wishlist.html" class="nav-link">Wishlist</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Blog</a>
+                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
+                                <li class="nav-item"><a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a></li>
+                                <li class="nav-item"><a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a></li>
+                                <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog Details</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                     <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
+                                <li>
+                                    <select class="form-select">
+                                        <option selected>English</option>
+                                        <option value="1">Spanish</option>
+                                        <option value="2">Chinese</option>
+                                    </select>
+                                </li>
                                 <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
-                                <li><a href="{{url('cart')}}">
-                                        <button type="button" class="btn btn-primary">
-                                            <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
-                                        </button>
-                                    </a></li>
+                                <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -129,174 +158,70 @@
 
 
 
-<div class="products-details-area ptb-100">
+<div class="cart-area ptb-100">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-md-12">
-                <div class="products-details-thumbs-image">
-                    <ul class="products-details-thumbs-image-slides">
-                        <li><img src="{{asset('uploads/product/'.$product->image)}}" alt="image"></li>
-                        @if(!empty($product->image1))
-                        <li><img src="{{asset('uploads/product/'.$product->image1)}}" alt="image"></li>
-                        @endif
-                        @if(!empty($product->image2))
-                        <li><img src="{{asset('uploads/product/'.$product->image2)}}" alt="image"></li>
-                        @endif
-                    @if(!empty($product->image3))
-                            <li><img src="{{asset('uploads/product/'.$product->image3)}}" alt="image"></li>
-                        @endif
-                    @if(!empty($product->image4))
-                                <li><img src="{{asset('uploads/product/'.$product->image4)}}" alt="image"></li>
-                        @endif
-
-                    </ul>
-                    <div class="slick-thumbs">
-                        <ul>
-                            <li><img src="{{asset('uploads/product/'.$product->image)}}" alt="image"></li>
-                            @if(!empty($product->image1))
-                                <li><img src="{{asset('uploads/product/'.$product->image1)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image2))
-                                <li><img src="{{asset('uploads/product/'.$product->image2)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image3))
-                                <li><img src="{{asset('uploads/product/'.$product->image3)}}" alt="image"></li>
-                            @endif
-                            @if(!empty($product->image4))
-                                <li><img src="{{asset('uploads/product/'.$product->image4)}}" alt="image"></li>
-                            @endif
-                        </ul>
-                    </div>
-                </div>
+        <form>
+            <div class="cart-table table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @if(isset($products))
+                        @foreach($products as $product)
+                    <tr>
+                        <td><a href="{{url('cartRemove',$product['item']['id'])}}" class="remove"><i class='bx bx-trash'></i></a></td>
+                        <td class="product-thumbnail">
+                            <a href="products-details.html">
+                                <img src="{{asset('uploads/product/'.$product['item']['photo'])}}" alt="item">
+                                <h3>{{$product['item']['name']}}</h3>
+                            </a>
+                        </td>
+                        <td>Ksh:{{$product['item']['amount']}}</td>
+                        <td class="product-quantity">
+                            <div class="input-counter">
+                                <span class="minus-btn"><i class='bx bx-minus'></i></span>
+                                <input type="text" value="1">
+                                <span class="plus-btn"><i class='bx bx-plus'></i></span>
+                            </div>
+                        </td>
+                        <td>Ksh:{{$product['item']['amount'] * $product['quantity']}}</td>
+                    </tr>
+                        @endforeach
+                    @else
+                        <td>Cart Empty</td>
+                    @endif
+                    </tbody>
+                </table>
             </div>
-            <div class="col-lg-7 col-md-12">
-                <div class="products-details-desc">
-                    <h3>{{$product->name}}</h3>
-                    <div class="price">
-                        <span class="new-price">Ksh {{$product->amount}}</span>
-                    </div>
-                    <p>{{$product->desc}}</p>
-                    <form id="productDetailForm">
-                        <input type="hidden" value="{{$product->id}}" name="productId" id="productDetail">
-                    <div class="products-add-to-cart">
-                        <button class="default-btn"><span>Add to Cart</span></button>
-                    </div>
-                    </form>
-                    <a href="wishlist.html" class="add-to-wishlist"><i class='bx bx-heart'></i> Add to wishlist</a>
-                    <div class="products-share">
-                        <ul class="social">
-                            <li><span>Share:</span></li>
-                            <li><a href="#" class="facebook" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                            <li><a href="#" class="twitter" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                            <li><a href="#" class="linkedin" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
-                            <li><a href="#" class="instagram" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12">
-                <div class="products-details-tabs">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="description" role="tabpanel">
-                            <h3>{{$product->topic}}</h3>
-                            <p>{{$product->desc}}</p>
+            <div class="cart-buttons">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-sm-12 col-md-7">
+                        <div class="shopping-coupon-code">
+                            <input type="text" class="form-control" placeholder="Coupon code" name="coupon-code" id="coupon-code">
+                            <button type="submit">Apply Coupon</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="cart-totals">
+                <ul>
+                    @if(isset($totalPrice))
+                    <li>Total <span>Ksh:{{$totalPrice}}</span></li>
+                    @endif
+                </ul>
+                <a href="{{url('checkout')}}" class="default-btn"><span>Proceed to Checkout</span></a>
+            </div>
+        </form>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="modal fade" id="ignismyModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
-                    </div>
 
-                    <div class="modal-body">
-                        <div class="thank-you-pop">
-                            <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
-                            <h1>ITEM ADDED TO CART!</h1>
-
-                        </div>
-                        <div style="padding-left: 110px">
-                        <a href="{{url('shop')}}"><button class="btn btn-success">Continue Shopping</button></a>
-                        <a href="{{url('cart')}}"><button class="btn btn-info">View Cart</button></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    /*--thank you pop starts here--*/
-    .thank-you-pop{
-        width:100%;
-        padding:20px;
-        text-align:center;
-    }
-    .thank-you-pop img{
-        width:76px;
-        height:auto;
-        margin:0 auto;
-        display:block;
-        margin-bottom:25px;
-    }
-
-    .thank-you-pop h1{
-        font-size: 42px;
-        margin-bottom: 25px;
-        color:#5C5C5C;
-    }
-    .thank-you-pop p{
-        font-size: 20px;
-        margin-bottom: 27px;
-        color:#5C5C5C;
-    }
-    .thank-you-pop h3.cupon-pop{
-        font-size: 25px;
-        margin-bottom: 40px;
-        color:#222;
-        display:inline-block;
-        text-align:center;
-        padding:10px 20px;
-        border:2px dashed #222;
-        clear:both;
-        font-weight:normal;
-    }
-    .thank-you-pop h3.cupon-pop span{
-        color:#03A9F4;
-    }
-    .thank-you-pop a{
-        display: inline-block;
-        margin: 0 auto;
-        padding: 9px 20px;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 14px;
-        background-color: #8BC34A;
-        border-radius: 17px;
-    }
-    .thank-you-pop a i{
-        margin-right:5px;
-        color:#fff;
-    }
-    #ignismyModal .modal-header{
-        border:0px;
-    }
-    /*--thank you pop ends here--*/
-
-</style>
 
 <footer class="footer-area">
     <div class="container">
@@ -309,7 +234,7 @@
                     <ul class="footer-contact-info">
                         <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>
                         <li><span>Tech support:</span> <a href="tel:+1514312-5678">+1 (514) 312-5678</a></li>
-                        <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#f9919c959596b989988d9690d79a9694"><span class="__cf_email__" data-cfemail="442c2128282b043425302b2d6a272b29">[email&#160;protected]</span></a></li>
+                        <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#a2cac7cececde2d2c3d6cdcb8cc1cdcf"><span class="__cf_email__" data-cfemail="1e767b7272715e6e7f6a7177307d7173">[email&#160;protected]</span></a></li>
                         <li><span>Address:</span> 1523 Cook Hill Road New Haven, CT</li>
                     </ul>
                 </div>
@@ -380,7 +305,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="image">
-                            <img src="{{asset('assets/img/products/products1.jpg')}}" alt="image">
+                            <img src="assets/img/products/products1.jpg" alt="image">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -449,7 +374,7 @@
                         <h3 class="widget-title"><span>Our Best Sellers</span></h3>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products1.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products1.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Pet brash</a></h4>
@@ -465,7 +390,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products2.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products2.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Automatic dog blue leash</a></h4>
@@ -481,7 +406,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products3.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products3.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Cat toilet bowl</a></h4>
@@ -497,7 +422,7 @@
                         </article>
                         <article class="item">
                             <a href="products-details.html" class="thumb">
-                                <img src="{{asset('assets/img/products/products4.jpg')}}" alt="blog-image">
+                                <img src="assets/img/products/products4.jpg" alt="blog-image">
                             </a>
                             <div class="info">
                                 <h4 class="title"><a href="products-details.html">Bowl with rubber toy</a></h4>
@@ -540,46 +465,23 @@
     </div>
 </div>
 
-<script data-cfasync="false" src="https://templates.envytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{{asset('assets/js/jquery.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
-<script src="{{asset('assets/js/meanmenu.min.js')}}"></script>
-<script src="{{asset('assets/js/appear.min.js')}}"></script>
-<script src="{{asset('assets/js/countrySelect.min.js')}}"></script>
-<script src="{{asset('assets/js/odometer.min.js')}}"></script>
-<script src="{{asset('assets/js/loopcounter.js')}}"></script>
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('assets/js/rangeSlider.min.js')}}"></script>
-<script src="{{asset('assets/js/slick.min.js')}}"></script>
-<script src="{{asset('assets/js/form-validator.min.js')}}"></script>
-<script src="{{asset('assets/js/contact-form-script.js')}}"></script>
-<script src="{{asset('assets/js/ajaxchimp.min.js')}}"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
 
-<script >
-    $('#productDetailForm').on('submit',function (event) {
-        event.preventDefault();
-        productId = $('#productDetail').val();
-    $.ajax({
-    type:"post",
-    url:"{{route('storeCart')}}",
-    data:{
-    "_token": "{{ csrf_token() }}",
-    productId:productId},
-    success:function (data) {
-    alert('ok')
-    $('#ignismyModal').modal('show');
-    },
-    error:function (error) {
-        console.log(error)
-        alert('error')
-
-    }
-
-    });
-    });
-</script>
+<script data-cfasync="false" src="https://templates.envytheme.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/meanmenu.min.js"></script>
+<script src="assets/js/appear.min.js"></script>
+<script src="assets/js/countrySelect.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/loopcounter.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/rangeSlider.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/form-validator.min.js"></script>
+<script src="assets/js/contact-form-script.js"></script>
+<script src="assets/js/ajaxchimp.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/products-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
 </html>

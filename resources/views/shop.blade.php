@@ -68,30 +68,15 @@
                 <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link">Home</a>
+                        <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                                <li class="nav-item"><a href="order-tracking.html" class="nav-link">Order Tracking</a></li>
-                                <li class="nav-item"><a href="profile-authentication.html" class="nav-link">My Account</a></li>
-                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-                                <li class="nav-item"><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
-                                <li class="nav-item"><a href="terms-conditions.html" class="nav-link">Terms & Conditions</a></li>
-                                <li class="nav-item"><a href="not-found.html" class="nav-link">404 Error Page</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="{{url('shop')}}" class="nav-link">Shop</a>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link active">Shop</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
-                                <li class="nav-item"><a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a></li>
-                                <li class="nav-item"><a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a></li>
-                                <li class="nav-item"><a href="blog-details.html" class="nav-link">Blog Details</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a>
                         </li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                     </ul>
                     <div class="others-option">
                         <div class="d-flex align-items-center">
@@ -165,350 +150,24 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            @foreach($products as $product)
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-products-box">
                     <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products1.jpg" alt="products-image">
+                        <a href="{{url('productDetail',$product->id)}}" class="d-block">
+                            <img src="{{asset('uploads/product/'.$product->image)}}" alt="products-image">
                         </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
                     </div>
                     <div class="content">
-                        <h3><a href="products-details.html">Pet brash</a></h3>
+                        <h3><a href="{{url('productDetail',$product->id)}}">{{$product->name}}</a></h3>
                         <div class="price">
-                            <span class="new-price">$35.00</span>
+                            <span class="new-price">Ksh {{$product->amount}}</span>
                         </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products2.jpg" alt="products-image">
-                        </a>
-                        <span class="hot">Hot!</span>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Automatic dog blue leash</a></h3>
-                        <div class="price">
-                            <span class="new-price">$75.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products3.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Cat toilet bowl</a></h3>
-                        <div class="price">
-                            <span class="new-price">$49.00</span>
-                            <span class="old-price">$55.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products4.jpg" alt="products-image">
-                        </a>
-                        <span class="on-sale">On Sale!</span>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Bowl with rubber toy</a></h3>
-                        <div class="price">
-                            <span class="new-price">$60.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products5.jpg" alt="products-image">
-                        </a>
-                        <span class="on-sale">On Sale!</span>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Stack pet collars</a></h3>
-                        <div class="price">
-                            <span class="new-price">$99.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products6.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Dog toy</a></h3>
-                        <div class="price">
-                            <span class="new-price">$15.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products7.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Plastic muzzle</a></h3>
-                        <div class="price">
-                            <span class="new-price">$29.00</span>
-                            <span class="old-price">$35.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products8.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Pet toy</a></h3>
-                        <div class="price">
-                            <span class="new-price">$25.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products9.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                        <div class="new">New!</div>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Pet chair</a></h3>
-                        <div class="price">
-                            <span class="new-price">$150.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products10.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Pink ceramic cat bowl</a></h3>
-                        <div class="price">
-                            <span class="new-price">$39.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products11.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                        <span class="sold">Sold!</span>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Red dog bed</a></h3>
-                        <div class="price">
-                            <span class="new-price">$125.00</span>
-                            <span class="old-price">$145.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                            <i class='bx bx-star'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-products-box">
-                    <div class="image">
-                        <a href="products-details.html" class="d-block">
-                            <img src="assets/img/products/products12.jpg" alt="products-image">
-                        </a>
-                        <ul class="products-button">
-                            <li><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView"><i class='bx bx-show'></i></a></li>
-                            <li><a href="products-details.html"><i class='bx bx-link-alt'></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h3><a href="products-details.html">Pet carrier</a></h3>
-                        <div class="price">
-                            <span class="new-price">$39.00</span>
-                        </div>
-                        <div class="rating">
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star'></i>
-                            <i class='bx bxs-star-half'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <div class="col-lg-12 col-md-12">
                 <div class="pagination-area">
                     <div class="nav-links">

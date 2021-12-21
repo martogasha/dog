@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,8 @@ Route::post('eProduct', [\App\Http\Controllers\AdminController::class, 'eProduct
 
 Route::get('/', [\App\Http\Controllers\ClientController::class, 'index']);
 Route::get('shop', [\App\Http\Controllers\ClientController::class, 'shop']);
+Route::get('cart', [\App\Http\Controllers\ClientController::class, 'cart']);
+Route::post('storeCart', [ClientController::class, 'storeCart'])->name('storeCart');
+
 Route::get('productDetail/{id}', [\App\Http\Controllers\ClientController::class, 'productDetail']);
 Route::get('productD', [\App\Http\Controllers\ClientController::class, 'productD']);
