@@ -1,29 +1,3 @@
-<div class="top-header-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <p>Phone: <b>0796522538</b> Gmail: <b>gabrielmburu63@gmail.com</b></p>
-            </div>
-            <div class="col-lg-5 col-md-5 col-sm-6">
-                <div class="search-box">
-                    <form>
-                        <input type="text" class="input-search" placeholder="Enter your keywords...">
-                        <button type="submit"><i class='bx bx-search'></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <ul>
-                    <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                    <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                    <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                    <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="navbar-area">
     <div class="patoi-responsive-nav">
@@ -91,6 +65,31 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="top-header-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <p>Phone: <b>0796522538</b> Gmail: <b>gabrielmburu63@gmail.com</b></p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-6">
+                <div class="search-box">
+                    <form>
+                        <input type="text" class="input-search" placeholder="Enter your keywords...">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <ul>
+                    <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
