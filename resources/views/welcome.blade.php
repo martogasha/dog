@@ -28,28 +28,82 @@
 @include('nav')
 
 
-<div class="main-banner-area">
-    <div class="container-fluid">
+
+<div class="banner-area pt-100">
+    <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-content">
-                    <span class="sub-title">Welcome to Pet Mundu</span>
-                    <h1>We provide best pet products</h1>
-                    <p>Save 20% off your first order</p>
-                    <a href="{{url('shop')}}" class="default-btn"><span>Shop Now</span></a>
+            <div class="col-lg-8 col-md-12">
+                <div class="banner-slides owl-carousel owl-theme">
+                    <div class="banner-content">
+                        <img src="assets/img/banner/banner6.jpg" alt="banner-image">
+                        <div class="content">
+                            <h1><span>The best</span> food for your dog</h1>
+                            <p>Delicious food made with love</p>
+                            <a href="{{url('shop')}}" class="default-btn"><span>Shop Now</span></a>
+                        </div>
+                    </div>
+                    <div class="banner-content">
+                        <img src="assets/img/banner/banner7.jpg" alt="banner-image">
+                        <div class="content">
+                            <h1><span>Get</span> best deals Pet Food</h1>
+                            <p>Delicious food made with love</p>
+                            <a href="{{url('shop')}}" class="default-btn"><span>Shop Now</span></a>
+                        </div>
+                    </div>
+                    <div class="banner-content">
+                        <img src="assets/img/banner/banner8.jpg" alt="banner-image">
+                        <div class="content">
+                            <h1><span>Pet</span> food and Accessories</h1>
+                            <p>Delicious food made with love</p>
+                            <a href="{{url('shop')}}" class="default-btn"><span>Shop Now</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-image">
-                    <img src="assets/img/banner/banner1.png" alt="banner-image">
-                    <img src="assets/img/banner/banner2.png" alt="banner-image">
-                    <img src="assets/img/banner/banner3.png" alt="banner-image">
+            <div class="col-lg-4 col-md-12">
+                <div class="banner-image">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a href="{{url('shop')}}">
+                                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height:170px">
+                                    <source src="assets/img/banner/nature.mp4" type="video/mp4">
+                                </video>
+
+                            </a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="{{url('shop')}}">
+                                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height:170px">
+                                    <source src="assets/img/banner/nature2.mp4" type="video/mp4">
+                                </video>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                        <a href="{{url('shop')}}">
+                            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height:170px">
+                                <source src="assets/img/banner/nature1.mp4" type="video/mp4">
+                            </video>
+
+                        </a>
+                        </div>
+                        <div class="col-sm">
+                        <a href="{{url('shop')}}">
+                            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height:170px">
+                                <source src="assets/img/banner/nature.mp4" type="video/mp4">
+                            </video>
+
+                        </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>
-<br>
+</div>  <br>
 <br>
 <div class="products-area pb-75">
     <div class="container">
