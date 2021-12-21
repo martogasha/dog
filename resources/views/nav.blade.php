@@ -30,7 +30,7 @@
         <div class="container">
             <div class="patoi-responsive-menu">
                 <div class="logo">
-                    <a href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
+                    <a href="{{url('/')}}"><img src="{{asset('assets/img/dogLogo.png')}}" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
     <div class="patoi-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="{{url('/')}}"><img src="assets/img/dogLogo.png" alt="logo"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('assets/img/dogLogo.png')}}" alt="logo"></a>
                 <div class="collapse navbar-collapse mean-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="{{url('/')}}" class="nav-link active">Home</a>
