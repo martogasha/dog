@@ -77,8 +77,9 @@
             </div>
             <div class="col-lg-5 col-md-5 col-sm-6">
                 <div class="search-box">
-                    <form>
-                        <input type="text" class="input-search" placeholder="Enter your keywords...">
+                    <form action="{{url('search')}}" method="post">
+                        @csrf
+                        <input type="text" class="input-search" name="search" placeholder="Enter your keywords...">
                         <button type="submit"><i class='bx bx-search'></i></button>
                     </form>
                 </div>

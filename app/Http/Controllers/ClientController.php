@@ -100,4 +100,13 @@ class ClientController extends Controller
             'totalPrice'=>$cart->totalPrice,
         ]);
     }
+    public function search(Request $request){
+        $search = $request->input('search');
+        $products = Product::where('name','like',"%$search%")->get();
+        $count = $products->count();
+        return view('search',[
+            'products'=>$products,
+            'count'=>$count
+        ]);
+    }
 }

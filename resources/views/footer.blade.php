@@ -4,7 +4,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <a href="{{url('/')}}" class="logo">
-                        <img src="{{asset('assets/img/dogLogo.png')}}" alt="logo">
+                        <img src="{{asset('assets/img/logoDown.jpg')}}" alt="logo">
                     </a>
                     <ul class="footer-contact-info">
                         <li><span>Phone:</span><a href="#">0796522538</a></li>
