@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Cat;
+use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Session;
 
 class AdminController extends Controller
 {
@@ -89,5 +95,49 @@ class AdminController extends Controller
         }
         $store->save();
         return redirect()->back()->with('success','PRODUCT ADDED SUCCESS');
+    }
+    public function placeOrder(Request $request){
+        if (Auth::check()){
+            $oldCart = Session::get('cat');
+            $cart = new Cat($oldCart);
+            $checkouts = $cart->item;
+                foreach ($checkouts as $checkout) {
+                    $phone = $request->phone;
+                    $order = new Order();
+                    $order->user_id = \Illuminate\Support\Facades\Auth::id();
+                    $order->product_id = $checkout['item']['id'];
+                    $order->order_quantity = $checkout['quantity'];
+                    $order->region = $request->region;
+                    $order->country = $request->country;
+                    $order->save();
+                }
+                $request->session()->forget('cat');
+                return redirect()->back()->with('success','ORDER PLACED SUCCESSFULLY');
+        }
+        else{
+            $register = User::create([
+                'name'=>$request->name,
+                'email'=>$request->email,
+                'role'=>$request->role,
+                'phone'=>$request->phone,
+                'role'=>$request->role,
+                'password'=>Hash::make($request->password),
+            ]);
+            $oldCart = Session::get('cat');
+            $cart = new Cat($oldCart);
+            $checkouts = $cart->item;
+            foreach ($checkouts as $checkout) {
+                $phone = $request->phone;
+                $order = new Order();
+                $order->user_id = $register->id;
+                $order->product_id = $checkout['item']['id'];
+                $order->order_quantity = $checkout['quantity'];
+                $order->region = $request->region;
+                $order->country = $request->country;
+                $order->save();
+            }
+            $request->session()->forget('cat');
+            return redirect()->back()->with('success','ORDER PLACED SUCCESSFULLY');
+        }
     }
 }

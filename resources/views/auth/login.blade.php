@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/patoi/default/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:57 GMT -->
+<!-- Mirrored from templates.envytheme.com/patoi/default/profile-authentication.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:55 GMT -->
 <head>
 
     <meta charset="utf-8">
@@ -20,115 +20,165 @@
     <link rel="stylesheet" href="assets/css/meanmenu.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Checkout - Pet Mundu Shop</title>
+    <title>Patoi - Pet Care Shop HTML Template</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
 @include('nav')
-@include('flash-message')
 
-<div class="checkout-area ptb-100">
-    <form action="{{url('placeOrder')}}" method="post">
-        @csrf
-        <input type="hidden" name="role" value="1">
+<div class="page-title-area">
     <div class="container">
-        @if(\Illuminate\Support\Facades\Auth::check())
-
-        @else
-            <div class="user-actions">
-                <span>Returning customer? <a href="{{url('login')}}">Click here to login</a></span>
-            </div>
-            @endif
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="billing-details">
-                        <h3><span>Billing details</span></h3>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Name <span class="required">*</span></label>
-                                    <input type="text" name="name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="text" name="phone" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Region <span class="required">*</span></label>
-                                    <input type="text" name="region" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="billing-details">
-                        <h3><span></span></h3>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Email <span class="required">*</span></label>
-                                    <input type="email" name="email" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label>Country / Region <span class="required">*</span></label>
-                                    <input id="country_selector2" type="text" name="country">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <div class="order-details">
-                        <h3>Your order</h3>
-                        <div class="order-table table-responsive">
-                            <table class="table table-bordered">
-                                <tbody>
-                                @if(isset($products))
-                                    @foreach($products as $product)
-                                <tr>
-                                    <td class="product-name"><a href="products-details.html">{{$product['item']['name']}}</a></td>
-                                    <td class="product-total">
-                                        <span class="subtotal-amount">Ksh:{{$product['item']['amount']*$product['quantity']}}</span>
-                                    </td>
-                                </tr>
-                                    @endforeach
-                                @endif
-                                <tr>
-                                    <td class="total-price"><span>Order Total</span></td>
-                                    <td class="product-subtotal">
-                                        <span class="subtotal-amount">Ksh:{{$totalPrice}}</span>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="payment-box">
-                            <div class="payment-method">
-                                <p>
-                                    <input type="radio" id="cash-on-delivery" name="radio-group" checked>
-                                    <label for="cash-on-delivery">Cash on delivery</label>
-                                    Pay with cash upon delivery.
-                                </p>
-                            </div>
-                            <button type="submit" class="default-btn"><span>Place Order</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="page-title-content">
+            <h1>My Account</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>My Account</li>
+            </ul>
+        </div>
     </div>
-    </form>
+</div>
+
+@include('flash-message')
+<div class="profile-authentication-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <form action="{{url('log')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 remember-me-wrap">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember-me">
+                                    <label class="form-check-label" for="remember-me">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 lost-your-password-wrap">
+                                <a href="#" class="lost-your-password">Lost your password?</a>
+                            </div>
+                        </div>
+                        <button type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="register-form">
+                    <h2>Register</h2>
+                    <form action="{{url('reg')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="password1" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword1" placeholder="Confirm Password" required>
+                        </div>
+                        <span id="passwordMatch" style="color: green">Password match</span>
+                        <br>
+                        <span id="passwordError" style="color: red">Password don't match match</span>
+                        <button type="submit">Register</button>
+                        <input type="hidden" name="role" value="1">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-@include('footer')
+<footer class="footer-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <a href="index.html" class="logo">
+                        <img src="assets/img/white-logo.png" alt="logo">
+                    </a>
+                    <ul class="footer-contact-info">
+                        <li><span>Hotline:</span> <a href="tel:12855">12855</a></li>
+                        <li><span>Tech support:</span> <a href="tel:+1514312-5678">+1 (514) 312-5678</a></li>
+                        <li><span>Email:</span> <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#a2cac7cececde2d2c3d6cdcb8cc1cdcf"><span class="__cf_email__" data-cfemail="650d0009090a251504110a0c4b060a08">[email&#160;protected]</span></a></li>
+                        <li><span>Address:</span> 1523 Cook Hill Road New Haven, CT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget pl-4">
+                    <h3>Information</h3>
+                    <ul class="custom-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Refund Policy</a></li>
+                        <li><a href="terms-conditions.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Customer service</h3>
+                    <ul class="custom-links">
+                        <li><a href="profile-authentication.html">My Account</a></li>
+                        <li><a href="faq.html">FAQ's</a></li>
+                        <li><a href="cart.html">Order History</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="terms-conditions.html">Delivery Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h3>Subscribe to our newsletter!</h3>
+                    <p>Sign up for our mailing list to get the latest updates news & offers.</p>
+                    <form class="newsletter-form" data-toggle="validator">
+                        <input type="email" class="input-newsletter" placeholder="Your email address" name="EMAIL" required autocomplete="off">
+                        <button type="submit"><i class='bx bx-paper-plane'></i></button>
+                        <div id="validator-newsletter" class="form-result"></div>
+                    </form>
+                    <div class="payment-types">
+                        <div class="d-flex align-items-center">
+                            <span>We accept:</span>
+                            <ul>
+                                <li><img src="assets/img/payment/visa.png" alt="visa"></li>
+                                <li><img src="assets/img/payment/mc.png" alt="master-card"></li>
+                                <li><img src="assets/img/payment/paypal.png" alt="paypal"></li>
+                                <li><img src="assets/img/payment/ae.png" alt="american-express"></li>
+                                <li><img src="assets/img/payment/discover.png" alt="discover"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <p>Copyright @2021 <span>Patoi</span>. Design & Developed by <a href="https://envytheme.com/">EnvyTheme</a></p>
+        </div>
+    </div>
+</footer>
 
 <div class="go-top"><i class='bx bx-upvote'></i></div>
 
@@ -317,6 +367,21 @@
 <script src="assets/js/ajaxchimp.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
-
-<!-- Mirrored from templates.envytheme.com/patoi/default/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:59 GMT -->
+<script>
+    $(document).ready(function () {
+        $('#passwordError').hide();
+        $('#passwordMatch').hide();
+    });
+    $('#confirmPassword1').on('keyup',function () {
+        if ($('#password1').val() == $('#confirmPassword1').val() ){
+            $('#passwordMatch').show();
+            $('#passwordError').hide();
+        }
+        else {
+            $('#passwordError').show();
+            $('#passwordMatch').hide();
+        }
+    });
+</script>
+<!-- Mirrored from templates.envytheme.com/patoi/default/profile-authentication.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Dec 2021 05:55:55 GMT -->
 </html>

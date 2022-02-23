@@ -109,4 +109,7 @@ class ClientController extends Controller
             'count'=>$count
         ]);
     }
+    public function profile(){
+        return view('profile');
+    }
 }

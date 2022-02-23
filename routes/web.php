@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 Route::get('admin', [\App\Http\Controllers\AdminController::class, 'admin']);
 Route::get('addProduct', [\App\Http\Controllers\AdminController::class, 'addProduct']);
 Route::get('products', [\App\Http\Controllers\AdminController::class, 'product']);
@@ -34,3 +44,8 @@ Route::post('storeCart', [ClientController::class, 'storeCart'])->name('storeCar
 
 Route::get('productDetail/{id}', [\App\Http\Controllers\ClientController::class, 'productDetail']);
 Route::get('productD', [\App\Http\Controllers\ClientController::class, 'productD']);
+Route::get('profile', [\App\Http\Controllers\ClientController::class, 'profile']);
+Route::post('reg', [\App\Http\Controllers\AuthController::class, 'reg']);
+Route::post('log', [\App\Http\Controllers\AuthController::class, 'log']);
+Route::post('updateProfile', [\App\Http\Controllers\AuthController::class, 'updateProfile']);
+Route::post('placeOrder', [\App\Http\Controllers\AdminController::class, 'placeOrder']);

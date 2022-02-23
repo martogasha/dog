@@ -27,8 +27,13 @@
                     </ul>                    <div class="others-option">
                         <div class="d-flex align-items-center">
                             <ul>
-                                <li><a href="profile-authentication.html"><i class='bx bx-user-circle'></i></a></li>
-                                <li><a href="{{url('cart')}}">
+                                @if(\Illuminate\Support\Facades\Auth::check())
+                                <li><a href="{{url('profile')}}">{{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
+                                @else
+                                    <li><a href="{{url('login')}}">Login</a></li>
+
+                                @endif
+                                    <li><a href="{{url('cart')}}">
                                         <button type="button" class="btn btn-primary">
                                             <i class='bx bx-cart'></i><span class="badge bg-danger ms-2">{{\Illuminate\Support\Facades\Session::has('cat') ? \Illuminate\Support\Facades\Session::get('cat')->totalQty: ''}}</span>
                                         </button>
