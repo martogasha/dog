@@ -91,9 +91,9 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6">
                 <ul>
-                    <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://web.facebook.com/petmundokenya" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/petmundokenya/?hl=en" target="_blank"><i class='bx bxl-instagram'></i></a></li>
                     <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                    <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
                     <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
                 </ul>
             </div>
